@@ -27,7 +27,7 @@ flowchart LR
 
 | File | Purpose |
 |------|---------|
-| `Model_Training.ipynb` | Loads and resizes the images with OpenCV, one-hot encodes labels, trains the Keras CNN (Conv2D 16→32→64 filters, max-pooling, dropout, Dense 512, softmax), with Adam and an early-stopping callback. |
+| `Model_Training.ipynb` | Loads and resizes the images with OpenCV, one-hot encodes labels, trains the Keras CNN (four Conv2D layers, 16→32→64→64 filters, max-pooling, dropout, Dense 512, softmax), with Adam and an early-stopping callback. |
 | `traffic.h5` | Trained model weights. |
 | `camera.py` | Threaded webcam stream; scans each frame with a sliding window and reports a sign when the classifier is more than 99 % confident. |
 | `server.py` | TCP socket server (`jpysocket`) that sends the recognised sign name to a Java client. |
